@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>edit</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+      <style>
+  .allscreen {
+  position: fixed;
+  height: 100vh;
+}
+.hideoverflow {
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  border: solid #DCDFE3 1px
+}
+.hideoverflow select {
+  padding: 4px;
+  margin: -5px -20px -5px -5px;
+}
+.btn-custom-1 {
+    width: 100px !important;
+}
+.btn-custom-2 {
+    width: 130px !important;
+}
+.color btn{
+    color: lightcoral
+}
+      </style>
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-sm navbar-dark " style="background:#353a40;">
+      <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1" style="color:#EEEEEE;">Мені здається</span>
+    <ul class="navbar-nav ">
+        <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="35" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+            </svg>
+        </li>
+       <li class="nav-item">
+            <a class="nav-link " href="http://127.0.0.1:8000/" >Звернення</a>
+       </li>
+        <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="35" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+            </svg>
+        </li>
+       <li class="nav-item">
+          <a class="nav-link" href="#">Вихід</a>
+       </li>
+    </ul>
+      </div>
+</nav>
+
+  <div class="container-fluid allscreen" style="background:#F5F5F5;">
+      <div class="row">
+        <h1></h1>
+          <h1></h1>
+          <h1></h1>
+      </div>
+
+      <div class="row">
+
+          <div class="col-2"></div>
+
+          <div class="col-8">
+              <div class="container-fluid  " style="background:#C7C7C7">
+
+                  <div class="row">
+                         <div class="row  border-bottom" style="background:#F5F5F5" >
+                             <div class="col-11 block ">
+                                <h1>Звернення {{appeal.title}}</h1>
+                             </div>
+                             <div class="col-1">
+                                 <h1></h1>
+                                 <form method="GET" action="http://127.0.0.1:8000/">
+                            <button type="submit" class="btn btn-secondary">Назад</button>
+                             </form>
+                            </div>
+                         </div>
+
+                </div>
+
+                  <div class="row">
+                      <h1></h1>
+                      <h1></h1>
+                      <h1></h1>
+                      <h1></h1>
+                  </div>
+
+                      <div class='row'>
+
+                          <div class="col-md-8">
+                            <div class="row ">
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <span class="border-right d-flex justify-content-end ">ID</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    {{appeal.appeal_id}}
+                                </div>
+                            </div>
+                          </div>
+                      </div>
+
+                  <h1></h1>
+
+                        <div class='row'>
+                          <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-4">
+                                <div class="row">
+                                        <span class="border-right d-flex justify-content-end ">Email</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    {{appeal.email}}
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+
+                  <h1></h1>
+
+                         <div class='row'>
+                          <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-4">
+                                <div class="row">
+                                        <span class="border-right d-flex justify-content-end ">Заголовок</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    {{appeal.title}}
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+
+                  <h1></h1>
+
+                          <div class='row'>
+                          <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-4">
+                                <div class="row">
+                                        <span class="border-right d-flex justify-content-end ">Опис звернення</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    {{appeal.history}}
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+
+                  <h1></h1>
+
+                          <div class='row'>
+                          <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-4">
+                               <div class="row">
+                                        <span class="border-right d-flex justify-content-end ">Категорії</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    For first row
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+
+                  <h1></h1>
+
+                          <div class='row'>
+                          <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-4">
+                                <div class="row">
+                                        <span class="border-right d-flex justify-content-end ">Статус</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    {{appeal.status}}
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+
+                  <h1></h1>
+
+                          <div class='row'>
+                          <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-4">
+                                <div class="row">
+                                        <span class=" d-flex justify-content-end ">Дата створення звернення</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    {{appeal.date_of_creation}}
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+
+                  <div class="row">
+
+                      <h1></h1>
+                      <h1></h1>
+                      <h1></h1>
+
+                      <div class="col-7">
+
+                      </div>
+
+                      <div class="col-5">
+                          <div class="row">
+                          <form method="GET" action="http://127.0.0.1:8000/null_appeal">
+                          <button type="submit" value="active" name="appeal_delete" class="btn btn-danger">Видалити</button>
+                          </form>
+                          <form method="GET" action="http://127.0.0.1:8000/">
+                          <button type="submit" value="activate" class="btn btn-warning">Відхилити</button>
+                          </form>
+                          <form method="GET" action="http://127.0.0.1:8000/publicate">
+                          <button type="submit" value="activate"  name="appeal_publicate" class="btn btn-success">Опублікувати</button>
+                            </form>
+                          <form method="GET" action="http://127.0.0.1:8000/end_edit">
+                          <button type="submit" value="{{appeal.appeal_id}}" name="appeal_edit" class="btn btn-info">Редагувати</button>
+                          </form>
+                          </div>
+                          <h1></h1>
+                      </div>
+
+                  </div>
+
+
+                        </div>
+
+
+
+
+                  </div>
+
+              </div>
+
+
+        <div class="col-2"></div>
+
+      <div class="row">
+            <h1></h1>
+          <h1></h1>
+          <h1></h1>
+          <h1></h1>
+
+          <div class="col-2"></div>
+
+          <div class="col-8">
+              <div class="container-fluid  " style="background:#C7C7C7">
+                  <div class="row">
+                    <form method="GET" action="http://127.0.0.1:8000/end_edit">
+                      <div class="row">
+                            <div class="col-4">
+                                <h6>Заголовок</h6>
+                            </div>
+                            <div class="col-8">
+                                    <div class="form-group input-group-sm">
+                                        <input type="text" class="form-control" value='' id="FormControlInput1" placeholder="..." name="title">
+                                    </div>
+                            </div>
+                        </div>
+
+                      <div class="row">
+                            <div class="col-4">
+                                <h6>Опис зверення</h6>
+                            </div>
+                            <div class="col-8">
+                                    <div class="form-group input-group-sm">
+                                        <input type="text" class="form-control" value='' id="FormControlInput2" placeholder="..." name="history">
+                                    </div>
+                            </div>
+                        </div>
+
+                    <h1></h1>
+                      <h1></h1>
+                      <h1></h1>
+                      <h1></h1>
+                      <h1></h1>
+                    <div class="row">
+                        <button  type="submit" class="btn btn-secondary" name='appeal_id' value={{appeal.appeal_id}}>Вибрати</button>
+                    </div>
+                  </div>
+
+              </div>
+
+              <div class="col-2"></div>
+          </div>
+      </div>
+
+      </div>
+  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>
