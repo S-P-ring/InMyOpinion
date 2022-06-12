@@ -78,7 +78,7 @@ def index1(request):
     btn_query = request.GET.get('btn')
 
 
-
+"""temporary solution"""
     if direct_query == 'За зростанням':
         if sorting_by_query == 'Дата створення(за замовчуванням)':
             if status_query == 'Всі':
